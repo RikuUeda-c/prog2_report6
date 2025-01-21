@@ -2,7 +2,7 @@ package jp.ac.uryukyu.ie.e245752;
 
 import java.util.Random;
 
-public class GameLogic {
+public class GameTest {
     private static final String[] handNames = {"グー", "パー", "チョキ"};
     private static final String[] directionNames = {"上", "下", "左", "右"};
 

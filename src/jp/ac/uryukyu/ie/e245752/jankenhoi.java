@@ -61,8 +61,9 @@ public class jankenhoi {
                     continue; // 無効な入力の場合は再度じゃんけんを行う
                 }
 
-                int computerDirection = random.nextInt(4); // コンピュータの方向をランダムに選択
+                int computerDirection = random.nextInt(4); // コンピュータの方向をランダムに選択                
 
+                //じゃんけんであなたが勝った時
                 if (winner == "あなた"){
                     System.out.println("あなたの向き: " + directionNames[userDirection]);
                     System.out.println("コンピュータの向き: " + directionNames[computerDirection]);
@@ -74,7 +75,8 @@ public class jankenhoi {
                         System.out.println("残念！コンピュータはあなたの向きを向きませんでした。");
                     }
                     break; // 勝者が決まったのでゲーム終了
-                } 
+                }
+                //じゃんけんでコンピュータが勝った時 
                 else{
                     System.out.println("あなたの向き: " + directionNames[userDirection]);
                     System.out.println("コンピュータの向き: " + directionNames[computerDirection]);

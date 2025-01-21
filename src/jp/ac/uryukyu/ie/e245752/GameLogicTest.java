@@ -6,7 +6,7 @@ public class GameLogicTest {
 
     @Test
     public void testDetermineWinner() {
-        GameLogic gameLogic = new GameLogic();
+        GameTest gameLogic = new GameTest();
 
         // ユーザーがグー（0）、コンピュータがチョキ（2）
         int result = gameLogic.determineWinner(0, 2);
@@ -27,7 +27,7 @@ public class GameLogicTest {
 
     @Test
     public void testDetermineGameResult() {
-        GameLogic gameLogic = new GameLogic();
+        GameTest gameLogic = new GameTest();
 
         // 引き分け
         String result = gameLogic.determineGameResult(0);
@@ -44,7 +44,7 @@ public class GameLogicTest {
 
     @Test
     public void testIsDirectionMatch() {
-        GameLogic gameLogic = new GameLogic();
+        GameTest gameLogic = new GameTest();
 
         // ユーザーとコンピュータが同じ方向
         boolean isMatch = gameLogic.isDirectionMatch(0, 0);
@@ -57,7 +57,7 @@ public class GameLogicTest {
 
     @Test
     public void testGetComputerChoice() {
-        GameLogic gameLogic = new GameLogic();
+        GameTest gameLogic = new GameTest();
         
         // コンピュータの選択が0から2の範囲であることをテスト
         int choice = gameLogic.getComputerChoice();
@@ -66,7 +66,7 @@ public class GameLogicTest {
 
     @Test
     public void testGetComputerDirection() {
-        GameLogic gameLogic = new GameLogic();
+        GameTest gameLogic = new GameTest();
 
         // コンピュータの方向が0から3の範囲であることをテスト
         int direction = gameLogic.getComputerDirection();
