@@ -44,7 +44,7 @@ public class jankenhoi {
             int result = (userChoice - computerChoice + 3) % 3;
 
             if (result == 0) {
-                System.out.println("引き分けです！ じゃんけんを繰り返します。\n");
+                System.out.println("引き分け！ もう一度じゃんけんをしよう！！\n");
                 continue; // 引き分けの場合はじゃんけんを繰り返す
             } else {
                 String winner = (result == 1) ? "あなた" : "コンピュータ";
@@ -63,17 +63,32 @@ public class jankenhoi {
 
                 int computerDirection = random.nextInt(4); // コンピュータの方向をランダムに選択
 
-                System.out.println("あなたの向き: " + directionNames[userDirection]);
-                System.out.println("コンピュータの向き: " + directionNames[computerDirection]);
-
-                // あっち向いてホイの結果判定
-                if (userDirection == computerDirection) {
-                    System.out.println("おめでとう！コンピュータがあなたの向きを向きました！");
-                } else {
-                    System.out.println("残念！コンピュータはあなたの向きを向きませんでした。");
+                if (winner == "あなた"){
+                    System.out.println("あなたの向き: " + directionNames[userDirection]);
+                    System.out.println("コンピュータの向き: " + directionNames[computerDirection]);
+    
+                    // あっち向いてホイの結果判定
+                    if (userDirection == computerDirection) {
+                        System.out.println("おめでとう！コンピュータがあなたの向きを向きました！you win!!");
+                    } else {
+                        System.out.println("残念！コンピュータはあなたの向きを向きませんでした。");
+                    }
+                    break; // 勝者が決まったのでゲーム終了
+                } 
+                else{
+                    System.out.println("あなたの向き: " + directionNames[userDirection]);
+                    System.out.println("コンピュータの向き: " + directionNames[computerDirection]);
+    
+                    // あっち向いてホイの結果判定
+                    if (userDirection == computerDirection) {
+                        System.out.println("残念！あなたがコンピュータの向きを向きました！you lose");
+                    } else {
+                        System.out.println("あなたはコンピュータの向きを向きませんでした。");
+                    }
+                    break; // 勝者が決まったのでゲーム終了
+                    }  
                 }
-                break; // 勝者が決まったのでゲーム終了
             }
         }
-    }
 }
+
